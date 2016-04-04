@@ -1,6 +1,5 @@
 var fs=require('fs');
 var keys = require('./keys.js');
-var http = require('http');
 var request = require('request');
 var spotify = require('spotify');
 var Twitter = require('twitter');
@@ -140,14 +139,18 @@ function doWhatItSays(){
 		  //if the random.txt is missing a comma (my-tweets would not require a comma for example)
 		  if(data.indexOf(",")>-1){
 			  var myOwnProcessArgv = data.split(",");
-			  param = myOwnProcessArgv[1];
-			  userWants = myOwnProcessArgv[0];
+			  param = myOwnProcessArgv[1].trim();
+			  userWants = myOwnProcessArgv[0].trim();
 		  }else{
 		  	userWants = data.trim();
 		  };
- 
- 		whatDoesUserWant(userWants,param);
-
+ 		
+ 		if(userWants!=="do-what-it-says"){
+ 			console.log("You are accessing the data in random.txt".bold.red);
+ 			whatDoesUserWant(userWants,param);
+ 		}else{
+ 			console.log("do-what-it-says not valid in random.txt".bold.red);
+ 		}
 	});
 }
 //append output to file (chose not to include console logs due to the npm colors which would need to be in string so not really DRY code anyway)
