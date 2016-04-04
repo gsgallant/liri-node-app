@@ -11,10 +11,10 @@ var userWants = process.argv[2];
 var param = process.argv[3];
 
 var client = new Twitter({
-  consumer_key: keys.twitterKeys.consumer_key,
-  consumer_secret: keys.twitterKeys.consumer_secret,
-  access_token_key: keys.twitterKeys.access_token_key,
-  access_token_secret: keys.twitterKeys.access_token_secret,
+	  consumer_key: keys.twitterKeys.consumer_key,
+	  consumer_secret: keys.twitterKeys.consumer_secret,
+	  access_token_key: keys.twitterKeys.access_token_key,
+	  access_token_secret: keys.twitterKeys.access_token_secret,
 });
 
 whatDoesUserWant(userWants,param);
@@ -88,7 +88,7 @@ function spotifyThisSong(trackName){
 		    	outputString("\n      Which has "+items[i].artists.length+" artists performing on the track");
 		    	
 			    	for (k=0;k<items[i].artists.length;++k){
-			    		console.log("        Artist: ".bold+items[i].artists[k].name);
+			    		console.log("         Artist: ".bold+items[i].artists[k].name);
 			    		outputString("\n        Artist: "+items[i].artists[k].name);
 			    	}
 			}
