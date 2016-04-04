@@ -1,0 +1,23 @@
+{
+  "name": "liri_node",
+  "version": "1.0.0",
+  "description": "liri for RBC Homework week10",
+  "main": "liri.js",
+  "scripts": {
+    "test": "node liri movie-this aliens"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gsgallant/liri-node-app.git"
+  },
+  "keywords": [
+    "RCB",
+    "liri"
+  ],
+  "author": "Greg Gallant",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gsgallant/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/gsgallant/liri-node-app#readme"
+}
