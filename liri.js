@@ -77,19 +77,19 @@ function spotifyThisSong(trackName){
     outputString("\nNumber of albums with this track: "+items.length);
 		    for (i=0;i<items.length;++i){
 		    	console.log("\nSong Name: ".bold+items[i].name.red.underline);
-		    	console.log("---Preview Link of the song on Spotify: ".bold+items[i].preview_url.blue);
-		    	console.log("-----Album Name: ".bold+items[i].album.name);
-		    	console.log("------Which has ".bold+items[i].artists.length+" artists performing on the track");
+		    	console.log("   Preview Link of the song on Spotify: ".bold+items[i].preview_url.blue);
+		    	console.log("     Album Name: ".bold+items[i].album.name);
+		    	console.log("       Which has ".bold+items[i].artists.length+" artists performing on the track");
 		    	
 		    	outputString("\n");
 		    	outputString("\nSong Name: "+items[i].name);
-		    	outputString("\n---Preview Link of the song on Spotify: "+items[i].preview_url);
-		    	outputString("\n-----Album Name: "+items[i].album.name);
-		    	outputString("\n------Which has "+items[i].artists.length+" artists performing on the track");
+		    	outputString("\n    Preview Link of the song on Spotify: "+items[i].preview_url);
+		    	outputString("\n     Album Name: "+items[i].album.name);
+		    	outputString("\n      Which has "+items[i].artists.length+" artists performing on the track");
 		    	
 			    	for (k=0;k<items[i].artists.length;++k){
-			    		console.log("--------Artist: ".bold+items[i].artists[k].name);
-			    		outputString("\n--------Artist: "+items[i].artists[k].name);
+			    		console.log("        Artist: ".bold+items[i].artists[k].name);
+			    		outputString("\n        Artist: "+items[i].artists[k].name);
 			    	}
 			}
 			//add a blank line for readability and formatting (both terminal and file append)
